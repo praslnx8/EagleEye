@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.prasilabs.eagleeye"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="in.prasilabs.eagleeye.SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="in.prasilabs.eagleeye.Setup"></activity>
+        <activity android:name="in.prasilabs.eagleeye.MenuSet"></activity>
+        <activity android:name="in.prasilabs.eagleeye.Home" android:launchMode="singleTop"></activity>
+		<activity android:name="in.prasilabs.eagleeye.Cam"></activity>
+		<activity android:name="in.prasilabs.eagleeye.Log"></activity>
+		<activity android:name="in.prasilabs.eagleeye.OpenLogs"></activity>
+		<activity android:name="in.prasilabs.eagleeye.CloseLogs"></activity>
+		<activity android:name="in.prasilabs.eagleeye.DivertLogs"></activity>
+		<activity android:name="in.prasilabs.eagleeye.PiSet"></activity>
+		<activity android:name="in.prasilabs.eagleeye.UserSett"></activity>
+		<activity android:name="in.prasilabs.eagleeye.DivSet"></activity>
+		<activity android:name="in.prasilabs.eagleeye.Call" android:launchMode="singleTop"></activity>
+		<activity android:name="in.prasilabs.eagleeye.NotificationClass"></activity>
+		
+		<service android:name=".EagleServer" android:enabled="true"></service>
+		
+    </application>
+
+</manifest>

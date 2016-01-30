@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="Pi settings" >
+        <EditTextPreference
+            android:key="ip"
+            android:summary="Enter IP address"
+            android:title="Ip settings"
+            android:inputType="phone" />
+    </PreferenceCategory>
+
+    <PreferenceScreen
+        android:key="ipsettings"
+        android:title="Ip settings" >
+        <PreferenceCategory android:title="Eagle Ports" >
+            <EditTextPreference
+                android:key="port"
+                android:summary="enter Eagle Port address"
+                android:title="PI Server Port"
+                android:inputType="number" />
+            <EditTextPreference
+                android:key="adport"
+                android:summary="Enter Eagle voice port"
+                android:title="Voice Port" 
+                android:inputType="number"/>
+        </PreferenceCategory>
+        <PreferenceCategory android:title="Pi Ports" >
+            <EditTextPreference
+                android:key="drport"
+                android:summary="Enter Droid server port"
+                android:title="Droid port"
+                android:inputType="number" />
+            <EditTextPreference
+                android:key="vdport"
+                android:summary="enter video call port"
+                android:title="Video port"
+                android:inputType="number" />
+
+            <ListPreference
+                android:entries="@array/ping"
+                android:entryValues="@array/pingvalue"
+                android:key="ping"
+                android:title="Ping frequency" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+
+    <PreferenceCategory android:title="User settings" />
+        <EditTextPreference
+            android:summary="Username"
+            android:key="username"
+            android:inputType=""
+            android:title="User Name" />
+
+        <EditTextPreference
+            android:key="password"
+            android:summary="Enter Password"
+            android:title="Password"
+            android:inputType=""  />
+    <PreferenceCategory android:title="System">
+        <Preference 
+            android:title="Refresh"
+            android:key="rfrsh" />
+        <Preference
+            android:title="About Prasilabs"
+            android:summary="Developed by prasilabs"
+            android:key="abt" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
